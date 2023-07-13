@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import EventCard from '../components/EventCard.vue'
-
 import type { EventItem } from '@/type'
-
-import { ref } from 'vue'
+import { ref, type Ref } from 'vue'
 import EventService from '@/services/EventService'
-const events = ref<EventItem[]>([])
+
+const events: Ref<Array<EventItem>> = ref([])
 
 EventService.getEvent().then((response) => {
   events.value = response.data
+  console.log(events.value)
 })
 </script>
 
