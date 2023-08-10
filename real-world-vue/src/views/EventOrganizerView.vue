@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import EventCategories from '@/components/EventCategories.vue';
+import EventCategories from '@/components/EventCategories.vue'
 EventCategories
 import type { EventItem } from '@/type'
 
@@ -43,7 +43,7 @@ const events = ref<EventItem[]>([
 
 <template>
   <h1>Events For Good</h1>
-  <main class = " events ">
+  <main class="events">
     <EventCategories v-for="event in events" :key="event.id" :event="event"></EventCategories>
   </main>
 </template>
